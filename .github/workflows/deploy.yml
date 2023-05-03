@@ -7,12 +7,17 @@ on:
 jobs:
   run-npm-build:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v2
       - name: npm install and build webpack
         run: |
           npm install
           npm run build
-      - uses: JamesIves/github-pages-deploy-action@v4
+      - uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
-          folder: dist
+          dir: dist
+          branch: gh-pages
+          token: ${{ secrets.ACCESS_TOKEN }}
