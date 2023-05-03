@@ -1,0 +1,54 @@
+{
+  "name": "knot-games",
+  "version": "0.1.0",
+  "description": "Games inspired by the Knot Dice game.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --config webpack/prod.js ",
+    "build-dev": "webpack --config webpack/base.js ",
+    "start": "webpack-dev-server --config webpack/base.js --open",
+    "ls": "webpack --config webpack/base.js && live-server dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michiexile/knot-games.git"
+  },
+  "author": "Mikael Vejdemo-Johansson <michiexile@gmail.com>",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "bugs": {
+    "url": "https://github.com/michiexile/knot-games/issues"
+  },
+  "homepage": "https://github.com/michiexile/knot-games#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "esbuild": "^0.17.18",
+    "esbuild-loader": "^3.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "postcss-loader": "^7.3.0",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.7",
+    "typescript": "^5.0.4",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "dompurify": "^3.0.2",
+    "marked": "^5.0.0",
+    "phaser": "^3.60.0",
+    "phaser3-rex-plugins": "^1.60.1",
+    "remarkable": "^2.0.1"
+  }
+}
