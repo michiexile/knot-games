@@ -1,6 +1,6 @@
 {
   "name": "knot-games",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Games inspired by the Knot Dice game.",
   "main": "src/index.js",
   "scripts": {

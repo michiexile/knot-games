@@ -1,5 +1,5 @@
 import { Remarkable } from 'remarkable';
-import welcomeMD from "./assets/welcome.md";
+import { SetupRules } from "./shared";
 
 export default class Front extends Phaser.Scene {
     constructor() {
@@ -7,8 +7,9 @@ export default class Front extends Phaser.Scene {
     }
 
     create() {
-        var md = new Remarkable();
+        SetupRules("Rules Display", "This will contain game rules within each game.");
 
+        var md = new Remarkable();
         const welcomeMD = require("/src/assets/welcome.md")
 
         var el = document.getElementById("welcome");

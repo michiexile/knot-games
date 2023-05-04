@@ -50,7 +50,7 @@ export default class MenuHandler extends Phaser.Scene {
                 this.scene.stop(this.currentScene);
                 this.currentScene = null;
             }
-            document.getElementById("welcome").classList.remove("invisible");
+            document.getElementById("welcome").classList.remove("d-none");
         })
 
         var dropdown = document.getElementById("navbarDropdown-ul")
@@ -61,7 +61,7 @@ export default class MenuHandler extends Phaser.Scene {
             itemlink.href = "#";
             itemlink.id = `${spec.id}-selector`;
             itemlink.addEventListener("click", (event) => {
-                document.getElementById("welcome").classList.add("invisible");
+                document.getElementById("welcome").classList.add("d-none");
                 if(this.currentScene) {
                     this.scene.stop(this.currentScene);
                 }
@@ -75,7 +75,9 @@ export default class MenuHandler extends Phaser.Scene {
 
     resizeMenu() {
         let actualWidth = this.game.scale.displaySize.width;
+        let actualHeight = this.game.scale.displaySize.height;
         let navbar = document.getElementsByTagName("nav")[0];
-        navbar.style.width = Math.max(600, actualWidth).toString() + 'px';
+        navbar.style.width = Math.max(300, actualWidth).toString() + 'px';
+        this.scale.displaySize.setAspectRatio(actualWidth/actualHeight);
     }
 }
